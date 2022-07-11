@@ -64,15 +64,11 @@ const Comment = ({ comment }) => {
             <img src={comment.avatar} alt='event_creator' />
           </div>
           <div>
-            <Grid container>
-              <div>
-                <Typography className={clsx(classes.text, classes.name)}>{comment.name}</Typography>
-                <Typography className={clsx(classes.text, classes.comment)}>{comment.comment}</Typography>
-                <Grid container alignItems='center'>
-                  <Typography className={classes.date}>{comment.date}</Typography>
-                  <Typography className={classes.reply}>Reply</Typography>
-                </Grid>
-              </div>
+            <Typography className={clsx(classes.text, classes.name)}>{comment.name}</Typography>
+            <Typography className={clsx(classes.text, classes.comment)}>{comment.comment}</Typography>
+            <Grid container alignItems='center'>
+              <Typography className={classes.date}>{comment.date}</Typography>
+              <Typography className={classes.reply}>Reply</Typography>
             </Grid>
           </div>
         </Grid>

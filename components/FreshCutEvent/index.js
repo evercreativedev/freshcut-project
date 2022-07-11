@@ -23,8 +23,30 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1.5, 2),
     borderBottom: `1px solid ${theme.custom.palette.border}`
   },
+  commentsSection: {
+    paddingBottom: theme.spacing(9),
+  },
   comments: {
-    padding: theme.spacing(1, 2),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    maxHeight: theme.spacing(27.5),
+    overflow: 'auto',
+
+    '&::-webkit-scrollbar-track':
+    {
+      borderRadius: 0,
+      backgroundColor: '#151417',
+    },
+    '&::-webkit-scrollbar':
+    {
+      width: 4,
+      backgroundColor: '#151417',
+    },
+    '&::-webkit-scrollbar-thumb':
+    {
+      borderRadius: 0,
+      backgroundColor: '#3c3942',
+    },
   },
   badge: {
     width: theme.spacing(2.5),
@@ -54,6 +76,9 @@ const useStyles = makeStyles((theme) => ({
   },
   commentsHeader: {
     marginBottom: theme.spacing(2),
+    marginTop: theme.spacing(1),
+    marginLeft: theme.spacing(2),
+
     '& span': {
       color: '#8C8797',
       marginLeft: theme.spacing(0.25)
@@ -137,13 +162,15 @@ const FreshCutEvent = ({ event }) => {
               </Grid>
             </div>
           </Grid>
-          <div className={classes.comments}>
+          <div className={classes.commentsSection}>
             <Typography className={clsx(classes.text, classes.commentsHeader)}>Comments <span>{event.comments.length}</span></Typography>
-            {event.comments.map((comment, index) => {
-              return (
-                <Comment key={`comment-${index}`} comment={comment} />
-              )
-            })}
+            <div className={classes.comments}>
+              {event.comments.map((comment, index) => {
+                return (
+                  <Comment key={`comment-${index}`} comment={comment} />
+                )
+              })}
+            </div>
           </div>
           <Grid container className={classes.commentInputContainer}>
             <TextField className={classes.commentInput} placeholder='Add a comment...' />
