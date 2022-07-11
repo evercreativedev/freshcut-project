@@ -57,7 +57,11 @@ const useStyles = makeStyles((theme) => ({
   },
   following: {
     marginBottom: theme.spacing(1.5),
-    marginTop: theme.spacing(2)
+    marginTop: theme.spacing(1.5),
+
+    [theme.breakpoints.down('md')]: {
+      marginTop: theme.spacing(2)
+    }
   },
   followers: {
     fontSize: 17,
@@ -107,6 +111,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 17,
     lineHeight: '22px',
     fontWeight: 700,
+    textTransform: 'capitalize',
 
     '&:hover': {
       background: theme.palette.primary.main,
@@ -160,7 +165,6 @@ const CreateProfile = ({ profile }) => {
           {!isSmall && <Button className={classes.followButton}>Follow</Button>}
         </Grid>
         {isSmall && renderFollowing()}
-        
         <Grid container className={classes.socials}>
           {profile.socials.map(social => {
             return (

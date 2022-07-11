@@ -129,6 +129,27 @@ const FRESH_EVENT3 = {
       likes: 11,
       date: '3d'
     },  
+    {
+      avatar: '/assets/avatar2.png',
+      name: 'uhSnow',
+      comment: 'I remember when this first dropped!',
+      likes: 11,
+      date: '3d'
+    },
+    {
+      avatar: '/assets/avatar3.png',
+      name: 'Marble',
+      comment: 'A comment is limited to two lines in the default view and when expanded you’ll be able to see the entire comment in full detail with more information.',
+      likes: 11,
+      date: '3d'
+    },
+    {
+      avatar: '/assets/avatar4.png',
+      name: 'AnthonyZ',
+      comment: 'A comment is limited to two lines in the default view and when expanded you’ll be able to see the entire comment in full detail with more information.',
+      likes: 11,
+      date: '3d'
+    },  
   ]
 };
 

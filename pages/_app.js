@@ -18,7 +18,14 @@ const MyApp = props => {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <title>FreshCut</title>
+        <meta charSet='utf-8' />
+        <meta name='keywords' content='Keywords' />
+        <meta name='description' content='Description' />
+        <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+        <meta name='theme-color' content='#FFFFFF' />
+        <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no' />
+        {/* <meta name="viewport" content="initial-scale=1, width=device-width" /> */}
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, 

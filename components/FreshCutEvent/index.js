@@ -29,8 +29,8 @@ const useStyles = makeStyles((theme) => ({
   comments: {
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
-    maxHeight: theme.spacing(27.5),
     overflow: 'auto',
+    maxHeight: theme.spacing(50),
 
     '&::-webkit-scrollbar-track':
     {
@@ -46,6 +46,15 @@ const useStyles = makeStyles((theme) => ({
     {
       borderRadius: 0,
       backgroundColor: '#3c3942',
+    },
+
+    [theme.breakpoints.down('lg')]: {
+      maxHeight: theme.spacing(30),
+      overflow: 'auto',
+    },
+    [theme.breakpoints.down('md')]: {
+      maxHeight: theme.spacing(27.5),
+      overflow: 'auto',
     },
   },
   badge: {
