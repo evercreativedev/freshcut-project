@@ -23,7 +23,7 @@ const PageWrapper = ({ children }) => {
   const classes = useStyles();
 
   return (
-    <Container maxWidth={'md'} className={classes.root}>
+    <Container maxWidth='xl' className={classes.root}>
       {children}
     </Container>
   );
